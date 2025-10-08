@@ -1,11 +1,11 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ITG1kIAV)
 # Homework - Sort Comparisons
 
-Name:
+Name: Karina Quenta
 
-Github Account name: 
+Github Account name: karinaquenta
 
-Link to Assignment on Github: (copy and paste the link to your assignment repo here)
+Link to Assignment on Github: (https://github.com/CS5008Fall2025/homework-sorts-karinaquenta)
 
 How many hours did it take you to complete this assignment (estimate)? 
 
