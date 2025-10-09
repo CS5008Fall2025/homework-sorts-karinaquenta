@@ -53,7 +53,7 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
     }
 
     if (print) {
-        printf("after passing %u, i+1");
+        printf("after passing %u: ", i + 1);
         for (unsigned int k=0;k<size;k++){
             printf("%d", array[k]);
         }
@@ -116,6 +116,8 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 // param(3) 'print' tells it to print out after each iteration.
 // Output:   No value is returned, but 'array' should
 //           be modified to store a sorted array of size.
+
+/** 
 void bubbleSortIntegers(int *array, unsigned int size, int print)
 {
     
@@ -143,7 +145,7 @@ void bubbleSortIntegers(int *array, unsigned int size, int print)
 }
 
 }
-
+***/
 // ** You will work on merge sort during the lab on Module 06 ** //
 
 // Merges two subarrays of arr[].

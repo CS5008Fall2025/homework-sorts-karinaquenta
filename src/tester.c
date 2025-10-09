@@ -9,7 +9,7 @@
 
 // these are called function pointers
 void (*sorts[])(int *, unsigned int, int) = {
-    bubbleSortIntegers,
+    //bubbleSortIntegers,
     selectionSortIntegers,
     insertionSortIntegers,
     mergeSortIntegers,
