@@ -87,24 +87,28 @@ Give the following values, place them correctly into *six* categories. Use the b
 Pair the following terms with the correct function in the table. 
 * Constant, Logarithmic, Linear, Quadratic, Cubic, Exponential, Factorial
 
-| Big $O$     |  Name  |
-| ------      | ------ |
-| $O(n^3)$    |  your answer here |
-| $O(1)$      |   |
-| $O(n)$      |   |
-| $O(\log_2n)$ |   |
-| $O(n^2)$    |   |
-| $O(n!)$     |   |
-| $O(2^n)$    |   |
+### Table [Big O and Fuunctions]
+| Big $O$      |  Name          |
+| ------       | ------         |
+| $O(n^3)$     |  Cubic         |
+| $O(1)$       | Constant       |
+| $O(n)$       | Linear         |
+| $O(\log_2n)$ | Logarithmic    |
+| $O(n^2)$     | Quadratic      |
+| $O(n!)$      | Factorial      |
+| $O(2^n)$     | Exponential    |
 
 
 
 ### 6. Stable vs Unstable
 Look up stability as it refers to sorting. In your own words, describe one sort that is stable and one sort that isn't stable  
 
+- When talking about stability in sorting, this means if two items have the same value, a stable sort keeps them in the same order they were originally in. An example of a stable sort is the merge sort since it keeps the same amount of elements in their original order because at the end it merges each batch of elements back together carefully. An unstable sort would be selection sort becasue it does not think of the original order, and moves an equal amount of elements around since it swaps elements based on the smallest value.
 
 ### 6.2 When stability is needed?
 Explain in your own words a case in which you will want a stable algorithm over an unstable. Include an example. 
+
+- Stability really matters when you care about the original order of equal items. An example would be sorting a list of kids at a daycare, first sort them by what grade the child is in then get their name. If you use a stable sort like merge sort for the grade they are in, the children would stay in their dedicated grades. But if you use an unstable sort like selection, the order could get mixed up. In other words, I would want a stable algorithm when there are multiple levels of sorting methods going on to keep everything consistent.
 
 ### 7. Gold Thief
 
@@ -113,9 +117,21 @@ You are planning a heist to steal a rare coin that weighs 1.0001 ounces. The pro
 #### 7.1 Algorithm
 Describe an algorithm that will help you find the coin. We encourage you to use pseudo-code, but not required.
 
+- split 250 coins into 4 equal piles
+- compare 2 piles at a time: weigh Pile 1 against Pile 2
+    - depending on the weight, one pile will be heaviest 
+    - if one pile is heavier, that pile will contain the rare coin
+    - if the weight is equal or scale balances, continue to check Pile 3 and Pile 4
+- repeat weighing the heaviest piles in half 
+- keep weighing the piles that get smaller and smaller when splitting in half
+- one coin will remain which will be the rare coin
+
+
 #### 7.2 Time Complexity
 What is the average time complexity of your algorithm? 
 
+- since each weighing step reduces the amount of coin by 4, the log 4(n), n = amount of coins
+- log 4(250) would be 4-5 weighings to find the rare coin.
 
 ## Technical Interview Practice Questions
 
@@ -123,17 +139,27 @@ For both these questions, are you are free to use what you did as the last secti
 
 1. Select one technical interview question (this module or previous) from the [technical interview list](https://github.com/CS5008-khoury/Resources/blob/main/TechInterviewQuestions.md) below and answer it in a few sentences. You can use any resource you like to answer the question.
 
+- When would we want an algorithm with a higher time complexity than another faster algorithm? 
+- I would want an algorithm with a higher time complexity depending on the task at hand. A faster algorithm might be quick, but could take up more memory, or it might be harder to understand and maintain. In those cases, we might pick a higher time complexity one that’s simpler or more reliable. A great example of this would be if there was an algorithm that is O(n²) but easy to code and debug, and another is O(n log n) but is very complicated to debug and full of messy edge cases.
+
 2. Select one coding question (this module or previous) from the [coding practice repository](https://github.com/CS5008-khoury/Resources/blob/main/LeetCodePractice.md) and include a c file with that code with your submission. Make sure to add comments on what you learned, and if you compared your solution with others. 
  
 
 ## Deeper Thinking
 Sorting algorithms are still being studied today. They often include a statistical analysis of data before sorting. This next question will require some research, as it isn't included in class content. When you call `sort()` or `sorted()` in Python 3.6+, what sort is it using? 
 
+- When calling sort() or sorted(), it uses an algorithm called Timsort, which is a hybrid sorting algorithm that uses both merge sort and insertion sort to make ure of the patterns that already exist within the data. 
+
 #### Visualize
 Find a graphic / visualization (can be a youtube video) that demonstrates the sort in action. 
 
+[![Timsort Video](https://img.youtube.com/vi/NVIjHj-lrT4/0.jpg)](https://www.youtube.com/watch?v=NVIjHj-lrT4)
+
 #### Big O
 Give the worst and best case time-complexity, and examples that would generate them. 
+
+- Worst case time complexity: O(n log n), this happens when the data is not sorted or in reverse, Ex. [6,5,4,3,2,1]
+- Best case time complexity: O(n), this happens when the data is already sorted or almost sorted, Ex. [1,2,3,4,5,6]
 
 <hr>
 
@@ -141,10 +167,24 @@ Give the worst and best case time-complexity, and examples that would generate t
 Add your references here. A good reference includes an inline citation, such as [1] , and then down in your references section, you include the full details of the reference. Use [ACM Reference format].
 
 1. “Analysis of Different Sorting Techniques.” GeeksforGeeks, 2025. GeeksforGeeks. Retrieved Aug. 2025 from https://www.geeksforgeeks.org/dsa/analysis-of-different-sorting-techniques/
-2. ...
-
-
-
+2. “Introduction to Algorithms.” MIT Press, 2009. MIT Press. Retrieved Oct. 2025 from https://mitpress.mit.edu/9780262033848/introduction-to-algorithms/
+3. “Time Complexity and Big O Notation (with Examples).” GeeksforGeeks, 2025. GeeksforGeeks. Retrieved Oct. 2025 from https://www.geeksforgeeks.org/time-complexity-and-big-o-notation/
+4. “Analysis of Algorithms – Growth of Functions.” Tutorialspoint, 2025. Tutorialspoint. Retrieved Oct. 2025 from https://www.tutorialspoint.com/analysis_of_algorithms/analysis_of_algorithms_growth_of_functions.html
+5. “Big-O Notation.” Khan Academy, 2025. Khan Academy. Retrieved Oct. 2025 from https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation
+6. “Big O Notation.” Wikipedia, The Free Encyclopedia, 2025. Wikipedia. Retrieved Oct. 2025 from https://en.wikipedia.org/wiki/Big_O_notation
+7. “Stable and Unstable Sorting Algorithms.” GeeksforGeeks, 2025. GeeksforGeeks. Retrieved Oct. 2025 from https://www.geeksforgeeks.org/stability-in-sorting-algorithms/
+8. “Sorting Algorithm Stability.” Tutorialspoint, 2025. Tutorialspoint. Retrieved Oct. 2025 from https://www.tutorialspoint.com/data_structures_algorithms/sorting_algorithms_stability.html
+9. “Merge Sort.” Wikipedia, The Free Encyclopedia, 2025. Wikipedia. Retrieved Oct. 2025 from https://en.wikipedia.org/wiki/Merge_sort
+10. “Selection Sort.” Khan Academy, 2025. Khan Academy. Retrieved Oct. 2025 from https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/selection-sort
+11. “When to Use Stable Sorting Algorithms.” GeeksforGeeks, 2025. GeeksforGeeks. Retrieved Oct. 2025 from https://www.geeksforgeeks.org/stability-in-sorting-algorithms/
+12. “Stable vs Unstable Sorting.” Tutorialspoint, 2025. Tutorialspoint. Retrieved Oct. 2025 from https://www.tutorialspoint.com/data_structures_algorithms/sorting_algorithms_stability.html
+13. “Merge Sort.” Wikipedia, The Free Encyclopedia, 2025. Wikipedia. Retrieved Oct. 2025 from https://en.wikipedia.org/wiki/Merge_sort
+14. “Sorting HOWTO.” Python Software Foundation, 2025. Python.org. Retrieved Oct. 2025 from https://docs.python.org/3/howto/sorting.html
+15. “Tim Peters — Timsort Algorithm.” Wikipedia, The Free Encyclopedia, 2025. Wikipedia. Retrieved Oct. 2025 from https://en.wikipedia.org/wiki/Timsort
+16. “Python List sort() Method.” GeeksforGeeks, 2025. GeeksforGeeks. Retrieved Oct. 2025 from https://www.geeksforgeeks.org/python-list-sort-method/
+17. “Sorting HOWTO.” Python Software Foundation, 2025. Python.org. Retrieved Oct. 2025 from https://docs.python.org/3/howto/sorting.html
+18. “Tim Peters — Timsort Algorithm.” Wikipedia, The Free Encyclopedia, 2025. Wikipedia. Retrieved Oct. 2025 from https://en.wikipedia.org/wiki/Timsort
+19. “Python List sort() Method.” GeeksforGeeks, 2025. GeeksforGeeks. Retrieved Oct. 2025 from https://www.geeksforgeeks.org/python-list-sort-method/
 
 
 ## Footnotes:
