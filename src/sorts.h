@@ -151,6 +151,8 @@ void bubbleSortIntegers(int *array, unsigned int size, int print)
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
 // Second subarray is arr[m+1..r]
+
+//worked on this with aliya and sid in lab
 void merge(int arr[], int temp[], int l, int m, int r)
 {
     if (arr == NULL || temp == NULL)
@@ -206,6 +208,8 @@ void merge(int arr[], int temp[], int l, int m, int r)
 //          	This helps temporarily store the sorted subarray.
 //          (3) 'l' and 'r' are integers, which are the first index and the last index of 'arr' respectively.
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
+
+//worked on this with aliya and sid in lab
 void merge_sort(int arr[], int temp[], int l, int r)
 {
     if (r-l >= 0)

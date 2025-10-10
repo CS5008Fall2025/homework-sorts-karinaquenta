@@ -136,7 +136,7 @@ Describe an algorithm that will help you find the coin. We encourage you to use 
 What is the average time complexity of your algorithm? 
 
 - since each weighing step reduces the amount of coin by 4, the log 4(n), n = amount of coins
-- $\log_4n$ (250) would be 4-5 weighings to find the rare coin.
+- $\log_4(250)$ would be 4-5 weighings to find the rare coin.
 
 ## Technical Interview Practice Questions
 
