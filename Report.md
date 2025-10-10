@@ -159,6 +159,7 @@ Sorting algorithms are still being studied today. They often include a statistic
 #### Visualize
 Find a graphic / visualization (can be a youtube video) that demonstrates the sort in action. 
 
+### Timsort Visualization Video (click below)
 [![Timsort Video](https://img.youtube.com/vi/NVIjHj-lrT4/0.jpg)](https://www.youtube.com/watch?v=NVIjHj-lrT4)
 
 #### Big O
