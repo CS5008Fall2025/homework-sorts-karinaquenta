@@ -29,8 +29,8 @@ Build a line chart using your favorite program. Your X axis will be N increasing
 
 Include the image in your markdown. As a reminder, you save the image in your repo, and use [image markdown].
 
-###Sorts Line Chart
-![Sorts Line chart](instructions/chart.png)
+### Sorts Line Chart
+![Sorts Line chart](src/images/chart.png)
 
 
 ### 2. Analysis
