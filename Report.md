@@ -54,7 +54,6 @@ Build another table that presents the best, worst, and average case for Bubble, 
 #### 3.2 Worst Case
 Provide example of arrays that generate _worst_ case for Bubble, Selection, Insertion, Merge Sorts
 
-- The worst case means when the sort takes the longest time to finish.
 - bubble sort: worst case is when the array is in reverse order, like [5,4,3,2,1] because it has to swap every single pair many times.
 - selection sort:actually always does the same number of comparisons no matter what, so even something like [5,4,3,2,1]is still the worst
 - insertion sort:lso worst when the array is reversed, like [9,8,7,6,5,4,3,2,1] becasue each number has to move to the front
@@ -63,6 +62,10 @@ Provide example of arrays that generate _worst_ case for Bubble, Selection, Inse
 #### 3.3 Best Case
 Provide example of arrays that generate _best_ case for Bubble, Selection, Insertion, Merge Sorts 
 
+- bubble sort: best case is when an array is sorted  and ends fast since there are no swaps, ex.[1,2,3,4,5]
+- selection sort: there is no best case in selection sort since each value gets checked regardless if it's sorted or not sorted [1,2,3,4,5]
+- insertion sort: best case is when the array is sorted and also ends early since there is no need to change places, ex [1,2,3,4,5]
+- merge sort: there is no best case for this sort either. Same amount of work in splitting and merging , ex.[1,2,3,4,5]
 
 #### 3.4 Memory Considerations
 Order the various sorts based on which take up the most memory when sorting to the least memory. You may have to research this, and include the mathematical notation. 
@@ -70,23 +73,14 @@ Order the various sorts based on which take up the most memory when sorting to t
 ### 4. Growth of Functions
 Give the following values, place them correctly into *six* categories. Use the bullets, and feel free to cut and paste the full LatexMath we used to generate them.  
 
-$n^2$  
-$n!$  
-$n\log_2n$  
-$5n^2+5n$  
-$10000$  
-$3n$    
-$100$  
-$2^n$  
-$100n$  
-$2^{(n-1)}$
+
 #### Categories
-* 
-*
-*
-*
-*
-*
+* Constant Time: $100$ , $10000$  
+* Linear Time: $3n$,$100n$ 
+* Log-linear time: $n\log_2n$
+* Quadratic time: $n^2$ , $5n^2+5n$  
+* Exponential time: $2^{(n-1)}$ , $2^n$ 
+* Factorial time: $n!$ 
 
 ### 5. Growth of Function Language
 
