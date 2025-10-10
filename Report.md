@@ -8,13 +8,18 @@ You are free to write a script to run the program and build your table (then cop
  
 
 ### Table [^note]
-| N | Bubble | Selection | Insertion | Merge | Quick |
-| :-- | :--: | :--: | :--: | :--: | :--: |
-
-
-
-
-
+| N     | Bubble  | Selection | Insertion  | Merge | 
+| :---: | :----:  | :-----: | :-------:  | :--:  | 
+|  1000 |0.000705 |0.000366 |0.000008   |0.000065 
+|  2000 |0.002632 |0.001428 |0.000010   |0.000134 
+|  3000 |0.014299 |0.009000 |0.000076   |0.000376 
+|  4000 |0.049880 |0.030941 |0.000041   |0.000820 
+|  5000 |0.194597 |0.120142 |0.000015   |0.001727 
+|  6000 |0.430533 |0.264020 |0.000014   |0.002567 
+|  7000 |0.772977 |0.471018 |0.000013   |0.003247 
+|  8000 |1.221679 |0.743435 |0.000010   |0.004154 
+| 9000  |2.854018 |1.986235 |0.000050   |0.006173 
+| 10,000|4.896290 |3.080039 |0.000009   |0.008553 
 
 
 ## BigO Analysis  / Questions
@@ -24,11 +29,14 @@ Build a line chart using your favorite program. Your X axis will be N increasing
 
 Include the image in your markdown. As a reminder, you save the image in your repo, and use [image markdown].
 
+###Sorts Line Chart
+![Sorts Line chart](instructions/chart.png)
 
 
 ### 2. Analysis
 Looking at the graph and the table, what can you say about the various sorts? Which are the fastest? Which are the slowest? Which are the most consistent? Which are the least consistent? Use this space to reflect in your own words your observations.
 
+- Looking at the graph and table, I can see that merge and quick sorts are the fastest sorts because their times stay pretty low even when the list gets bigger. The bubble, belection, and insertion sorts are way slower, especially when the numbers get large. Merge sort looks the most steady because it grows nice and smooth, and quick sort is usually fast but can change a bit depending on the data. The others are less consistent and take a lot longer as the list gets bigger.
 
 ### 3. Big O
 Build another table that presents the best, worst, and average case for Bubble, Selection, Insertion, Merge, and Quick. You are free to use resources for this, but please reference them if you do. 
@@ -37,6 +45,11 @@ Build another table that presents the best, worst, and average case for Bubble, 
 #### 3.2 Worst Case
 Provide example of arrays that generate _worst_ case for Bubble, Selection, Insertion, Merge Sorts
 
+- The worst case means when the sort takes the longest time to finish.
+- bubble sort: worst case is when the array is in reverse order, like [5,4,3,2,1] because it has to swap every single pair many times.
+- selection sort:actually always does the same number of comparisons no matter what, so even something like [5,4,3,2,1]is still the worst
+- insertion sort:lso worst when the array is reversed, like [9,8,7,6,5,4,3,2,1] becasue each number has to move to the front
+- merge sort:i wouldnt say merge sort has a worst case becsaue it always splits and merges the same way which makes it pretty consistent no matter what way it is put
 
 #### 3.3 Best Case
 Provide example of arrays that generate _best_ case for Bubble, Selection, Insertion, Merge Sorts 
