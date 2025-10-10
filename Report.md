@@ -41,6 +41,15 @@ Looking at the graph and the table, what can you say about the various sorts? Wh
 ### 3. Big O
 Build another table that presents the best, worst, and average case for Bubble, Selection, Insertion, Merge, and Quick. You are free to use resources for this, but please reference them if you do. 
 
+### Table [Best/Avg/Worst Cases]
+| Algo        | Best Case | Avg Case  | Worst Case  
+| :---:       | :----:    | :-----:   | :-------:  | 
+|  Bubble     |0(n)       |O(n^2)     |O(n^2)      |
+|  Selection  |O(n^2)     |O(n^2)     |O(n^2)      | 
+|  Insertion  |0(n)       |O(n^2)     |O(n^2)      |
+|  Merge Sort |O(n log n) |O(n log n) |O(n log n)  |
+|  Quick Sort |O(n log n) |O(n log n) |O(n^2)      |
+
 
 #### 3.2 Worst Case
 Provide example of arrays that generate _worst_ case for Bubble, Selection, Insertion, Merge Sorts
@@ -137,7 +146,7 @@ Give the worst and best case time-complexity, and examples that would generate t
 ## References
 Add your references here. A good reference includes an inline citation, such as [1] , and then down in your references section, you include the full details of the reference. Use [ACM Reference format].
 
-1. Reference info, date, etc.
+1. “Analysis of Different Sorting Techniques.” GeeksforGeeks, 2025. GeeksforGeeks. Retrieved Aug. 2025 from https://www.geeksforgeeks.org/dsa/analysis-of-different-sorting-techniques/
 2. ...
 
 
