@@ -70,6 +70,11 @@ Provide example of arrays that generate _best_ case for Bubble, Selection, Inser
 #### 3.4 Memory Considerations
 Order the various sorts based on which take up the most memory when sorting to the least memory. You may have to research this, and include the mathematical notation. 
 
+- merge sort: Uses the most memory, because it needs extra space to hold the temporary subarrays while merging. Space Complexity: O(n)
+- insertion sort: works mostly in place, only a few variables are used to shift elements. space complexity: O(1)
+- selection sort: an in-place sort, it just swaps elements and doesn’t need extra storage. space complexity: O(1)
+- bubble sort: same as insertion and selection sort where it only swaps in place with no extra arrays. space complexity: O(1)
+
 ### 4. Growth of Functions
 Give the following values, place them correctly into *six* categories. Use the bullets, and feel free to cut and paste the full LatexMath we used to generate them.  
 
@@ -131,7 +136,7 @@ Describe an algorithm that will help you find the coin. We encourage you to use 
 What is the average time complexity of your algorithm? 
 
 - since each weighing step reduces the amount of coin by 4, the log 4(n), n = amount of coins
-- log 4(250) would be 4-5 weighings to find the rare coin.
+- $\log_4n$ (250) would be 4-5 weighings to find the rare coin.
 
 ## Technical Interview Practice Questions
 
@@ -143,7 +148,8 @@ For both these questions, are you are free to use what you did as the last secti
 - I would want an algorithm with a higher time complexity depending on the task at hand. A faster algorithm might be quick, but could take up more memory, or it might be harder to understand and maintain. In those cases, we might pick a higher time complexity one that’s simpler or more reliable. A great example of this would be if there was an algorithm that is O(n²) but easy to code and debug, and another is O(n log n) but is very complicated to debug and full of messy edge cases.
 
 2. Select one coding question (this module or previous) from the [coding practice repository](https://github.com/CS5008-khoury/Resources/blob/main/LeetCodePractice.md) and include a c file with that code with your submission. Make sure to add comments on what you learned, and if you compared your solution with others. 
- 
+
+- In Group Lab document
 
 ## Deeper Thinking
 Sorting algorithms are still being studied today. They often include a statistical analysis of data before sorting. This next question will require some research, as it isn't included in class content. When you call `sort()` or `sorted()` in Python 3.6+, what sort is it using? 
